@@ -34,8 +34,8 @@ build:
 test: off
 
 test_script:
-  - ps: dotnet test --no-build
-  - ps: dotnet test "C:\projects\snapper\Snapper.Json.Nunit.Tests\Snapper.Json.Nunit.Tests.csproj" --no-build --logger:Appveyor
+  - ps: dotnet test --no-build --logger:Appveyor
+  #- ps: dotnet test "C:\projects\snapper\Snapper.Json.Nunit.Tests\Snapper.Json.Nunit.Tests.csproj" --no-build --logger:Appveyor
 
 deploy:
   - provider: NuGet
