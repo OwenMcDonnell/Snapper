@@ -31,10 +31,10 @@ build:
   project: Snapper.sln
   publish_nuget: true
 
-test: off
+#test: off
 
-test_script:
-  - ps: dotnet test --no-build
+#test_script:
+ # - ps: dotnet test --no-build
 
 deploy:
   - provider: NuGet
