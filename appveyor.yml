@@ -31,10 +31,11 @@ build:
   project: Snapper.sln
   publish_nuget: true
 
-#test: off
+test: off
 
-#test_script:
- # - ps: dotnet test --no-build
+test_script:
+  - ps: dotnet test --no-build
+  - ps: dotnet test "C:\projects\snapper\Snapper.Json.Nunit.Tests\Snapper.Json.Nunit.Tests.csproj" --configuration Release --no-build --test-adapter-path:. --logger:Appveyor
 
 deploy:
   - provider: NuGet
